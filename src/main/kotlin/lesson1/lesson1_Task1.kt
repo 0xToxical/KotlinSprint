@@ -1,10 +1,7 @@
-package org.example.lesson1
-
 
 fun main(){
-    println("Тестовое решение урок 1 задача 1")
-    println("Чтото доработали, проверяем")
-
+    val countOfOrders : Int = 75
+    val thanks: String ="Спасибо за покупку, ждем Вас вновь"
 
 
 }
