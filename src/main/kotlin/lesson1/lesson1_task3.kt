@@ -1,13 +1,13 @@
-fun main(){
+fun main() {
 
 //    val year: Int= 1962
 //    var hour: String= "09"
-//    var minutes: String ="07"
+//    var minute: String ="07"
 //println(year)
 //println(hour)
-//println(minutes)
+//println(minute)
 
-    var hour: Byte = 10
-    var minutes: Byte=55
-    print("$hour:$minutes")
+    val hour: Byte = 10
+    val minute: Byte = 55
+    print("$hour:$minute")
 }
