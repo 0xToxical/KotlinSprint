@@ -1,3 +1,5 @@
+package org.example.Lesson2
+
 fun main(){
     val a = 3
     val b = 4
@@ -5,7 +7,7 @@ fun main(){
     val d = 5
     val sum =(a+b+c+d)
     val AM = sum/4f
-println (AM)
+    println (AM)
 
 
 }
