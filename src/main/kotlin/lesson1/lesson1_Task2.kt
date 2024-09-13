@@ -1,16 +1,11 @@
-fun main(){
-
+fun main() {
     val countOfOrders: Byte = 75
-    val Thanks: String = "Спасибо за покупку, ждем Вас вновь!"
-
+    val thanks: String = "Спасибо за покупку, ждем Вас вновь!"
     println(countOfOrders)
-    println(Thanks)
+    println(thanks)
 
-//    val personalNumber = 2000
+    var personalNumber: Int = 2000
 //    println(personalNumber)
-
-    val personalNumber = 1999
-
-
+    personalNumber = 1999
     println(personalNumber)
 }
