@@ -1,6 +1,6 @@
 
 fun main(){
-    val numberOfOrders : Int = 75
+    val numberOfOrders : Byte = 75
     val thanks: String ="Спасибо за покупку, ждем Вас вновь"
 
 
