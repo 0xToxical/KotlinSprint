@@ -1,7 +1,13 @@
 fun main(){
 
-    val hour: Byte = 10
-    val minutes: Byte=55
-    print(hour)
-    print(minutes)
+//    val year: Int= 1962
+//    var hour: Byte = 9
+//    var minutes: Byte=  7
+//println(year)
+//println(hour)
+//println(minutes)
+
+    var hour: Byte = 10
+    var minutes: Byte=55
+    print("$hour:$minutes")
 }
