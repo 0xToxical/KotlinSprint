@@ -1,15 +1,16 @@
-fun main(){
-    val mins = 108
-    val minInHour = 60
-    val sum=(mins*minInHour)
-println (sum)
-    val hour = (sum/60/60)
+import java.time.LocalTime
+import java.time.Duration
 
+fun main() {
+    val depart = LocalTime.of(9, 7)
+    val arrival = LocalTime.of(10, 55)
 
-    val secondsOst1 = (6480%3600)
-    val minsOst = (secondsOst1/60)
-    val secondOst2 = (sum%60)
+    val duration = Duration.between(depart, arrival)
 
-print("0$hour:$minsOst:0$secondOst2")
+    val hours = duration.toHours()
+    val minutes = duration.toMinutes() % 60
+    val seconds = duration.toSeconds() % 60
+    val timeInSpace = String.format("%02d:%02d:%02d", hours, minutes, seconds)
+    println(timeInSpace)
 }
 
