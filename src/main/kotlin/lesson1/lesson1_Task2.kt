@@ -1,10 +1,11 @@
-package org.example.lesson1
+fun main() {
+    val countOfOrders: Byte = 75
+    val thanks: String = "Спасибо за покупку, ждем Вас вновь!"
+    println(countOfOrders)
+    println(thanks)
 
-
-fun main(){
-    println("Тестовое решение урок 1 задача 2")
-    println("Чтото доработали, проверяем")
-
-
-
+    var personalNumber: Int = 2000
+//    println(personalNumber)
+    personalNumber = 1999
+    println(personalNumber)
 }
