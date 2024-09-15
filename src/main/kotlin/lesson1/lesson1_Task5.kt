@@ -1,16 +1,13 @@
-import java.time.LocalTime
-import java.time.Duration
+const val SECONDS_IN_MINUTE = 60
 
 fun main() {
-    val depart = LocalTime.of(9, 7)
-    val arrival = LocalTime.of(10, 55)
+    val secondsInSpace: Short = 6480
 
-    val duration = Duration.between(depart, arrival)
-
-    val hours = duration.toHours()
-    val minutes = duration.toMinutes() % 60
-    val seconds = duration.toSeconds() % 60
-    val timeInSpace = String.format("%02d:%02d:%02d", hours, minutes, seconds)
+    val minutesInSpace = secondsInSpace / SECONDS_IN_MINUTE
+    val seconds = secondsInSpace % SECONDS_IN_MINUTE
+    val hours = minutesInSpace / SECONDS_IN_MINUTE
+    val minutes = minutesInSpace % SECONDS_IN_MINUTE
+    val timeInSpace = String.format("%02d:%02d:%02d", hours, minutes,seconds)
     println(timeInSpace)
 }
 
