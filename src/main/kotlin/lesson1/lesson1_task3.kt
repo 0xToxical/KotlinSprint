@@ -7,7 +7,7 @@ fun main() {
 //println(hour)
 //println(minute)
 
-    val hour: Byte = 10
-    val minute: Byte = 55
-    print("$hour:$minute")
+   val hour: Byte = 10
+   val minute: Byte = 55
+   print("$hour:$minute")
 }
