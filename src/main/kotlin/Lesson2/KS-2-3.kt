@@ -7,5 +7,5 @@ fun main() {
     val arrivalHour = (totalArrivalMin / 60) % 24
     val arrivalMin = totalArrivalMin % 60
 
-    println("Прибытие поезда в ${String.format("%02d", arrivalHour)}:${String.format("%02d", arrivalMin)}")
+    println("Прибытие поезда в %02d:%02d".format(arrivalHour, arrivalMin))
 }
