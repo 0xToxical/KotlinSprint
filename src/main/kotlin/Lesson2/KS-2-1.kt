@@ -1,11 +1,9 @@
-fun main(){
-    val a = 3
-    val b = 4
-    val c = 3
-    val d = 5
-    val sum =(a+b+c+d)
-    val AM = sum/4f
-println (AM)
-
-
+fun main() {
+    val engMark1 = 3
+    val engMark2 = 4
+    val engMark3 = 3
+    val engMark4 = 5
+    val sum = (engMark1 + engMark2 + engMark3 + engMark4).toFloat()
+    val ArifMed = (sum / 4)
+    println(ArifMed)
 }
