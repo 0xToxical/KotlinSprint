@@ -1,10 +1,14 @@
-package org.example.lesson1
+fun main() {
+    val year = 1961
+    var hour = 9
+    var minute = 7
 
+    println(year)
+    println(hour)
+    println(minute)
 
-fun main(){
-    println("Тестовое решение урок 1 задача 3")
-    println("Чтото доработали, проверяем")
+    hour = 10
+    minute = 55
 
-
-
+    println("$hour:$minute")
 }
