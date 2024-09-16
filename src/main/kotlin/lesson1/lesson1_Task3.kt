@@ -1,10 +1,14 @@
-package org.example.lesson1
+fun main() {
 
+//    val year: Int= 1961
+//    var hour: String= "09"
+//    var minute: String ="07"
+//   println(year)
+//   println(hour)
+//   println(minutes)
+//   println(minute)
 
-fun main(){
-    println("Тестовое решение урок 1 задача 3")
-    println("Чтото доработали, проверяем")
-
-
-
+    var hour: Byte = 10
+    var minute: Byte = 55
+    print("$hour:$minute")
 }
