@@ -3,12 +3,11 @@ fun main() {
     var to = "E4"
     var countOfMove = 1
 
-
-    println("Ход №$countOfMove,$from-$to")
+    println("$from-$to, Ход №$countOfMove")
 
     from = "D2"
     to = "D3"
-    countOfMove = 3
+    countOfMove += 1
 
-    println("Ход №$countOfMove,$from-$to")
+    println("$from-$to, Ход №$countOfMove")
 }
