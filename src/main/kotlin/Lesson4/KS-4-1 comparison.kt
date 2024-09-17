@@ -7,6 +7,5 @@ fun main() {
     val comparisonResult = today < numberOfTables
     val comparisonResult2 = tomorrow < numberOfTables
 
-    println("Доступность столиков на сегодня: $comparisonResult")
-    println("Доступность столиков на завтра: $comparisonResult2")
+    println("Доступность столиков на сегодня: $comparisonResult\nДоступность столиков на завтра: $comparisonResult2")
 }
