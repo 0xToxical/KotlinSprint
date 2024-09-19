@@ -1,16 +1,23 @@
 fun main() {
-    val shipIsDamaged: Boolean = false
     val MIN_CREW = 55
     val MAX_CREW = 70
-    val REQUIREMENT_CREW = 70
-    val MIN_PROVISION = 50
-    val GOOD_WEATHER = true
+    val MIN_PROVISION_WITHOUT_DAMAGE = 50
+    val MIN_PROVISION_WITH_LOW_DAMAGE = 51
 
+    val lowDamageToShip = "low"
+    val middleDamageToShip = "middle"
+    val highDamageToShip = "high"
+    val noDamageToShip = "none"
+    val weatherIsGood = true
+    val weatherIsBad = false
+
+    val damageLevel = lowDamageToShip
     val crewOnShip = 60
     var provisions = 51
-
     val shipCanSailAway =
-        (!shipIsDamaged && crewOnShip in MIN_CREW..MAX_CREW && provisions >= MIN_PROVISION) || (shipIsDamaged && crewOnShip == REQUIREMENT_CREW && GOOD_WEATHER && provisions >= provisions)
+        (damageLevel == noDamageToShip && crewOnShip in MIN_CREW..MAX_CREW && provisions >= MIN_PROVISION_WITHOUT_DAMAGE)
+     || (damageLevel == lowDamageToShip && crewOnShip == MAX_CREW && weatherIsGood && provisions >= MIN_PROVISION_WITH_LOW_DAMAGE)
+
 
     println("Корабль может отправиться в плавание? $shipCanSailAway")
 
