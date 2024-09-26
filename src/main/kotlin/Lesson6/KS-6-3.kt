@@ -1,11 +1,10 @@
 fun main() {
     println("Введите количество секунд:")
-    val seconds = readln().toInt()
-    var counter = 0
-    while (counter != seconds) {
-        println("Осталось секунд: ${seconds - counter}")
+    var seconds = readln().toInt()
+    while (seconds > 0) {
+        println("Осталось секунд: $seconds")
         Thread.sleep(seconds * 1000L)
-        counter++
+        seconds--
     }
     println("Время вышло")
 }
