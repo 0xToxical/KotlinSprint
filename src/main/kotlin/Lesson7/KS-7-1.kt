@@ -1,13 +1,13 @@
 fun main() {
-    val password = StringBuilder()
+    val numbers = ('0'..'9')
+    val lowerCaseLetters = ('a'..'z')
 
-    for (i in 1..6) {
-        if (i % 2 == 0) {
-            val number = (0..9).random()
-            password.append(number)
-        } else {
-            val letter = ('a'..'z').random()
-            password.append(letter)
+    var password = ""
+
+    repeat(6) {
+        when ((1..2).random()) {
+            1 -> password += numbers.random()
+            2 -> password += lowerCaseLetters.random()
         }
     }
 
