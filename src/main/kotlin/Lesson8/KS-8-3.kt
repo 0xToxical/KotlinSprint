@@ -1,11 +1,10 @@
 fun main() {
+    val ingredients = arrayOf("масло", "рис", "мясо", "лук", "морковь")
+    println("Какой ингредиент надо найти?")
+    val userIngredient = readln()
 
-    val ingridients = arrayOf("масло", "рис", "мясо", "лук", "морковь")
-    println("Какой ингридиент надо найти?")
-    val userIngr = readln()
-
-    if (ingridients.any { it.equals(userIngr, ignoreCase = true) }) {
-        println("Ингредиент $userIngr в рецепте есть")
+    if (userIngredient in ingredients) {
+        println("Ингредиент $userIngredient в рецепте есть")
     } else {
         println("Такого ингредиента в рецепте нет")
     }
