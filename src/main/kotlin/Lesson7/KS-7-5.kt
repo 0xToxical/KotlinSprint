@@ -1,5 +1,4 @@
 fun main() {
-
     println("Введите число символов в пароле (не меньше 6):")
     var passwordLength = readln().toInt()
 
@@ -8,14 +7,23 @@ fun main() {
         println("Длина пароля должна быть не меньше 6 символов. Пароль будет длиной $passwordLength символов.")
     }
 
-    val password = StringBuilder()
-    for (i in 1..passwordLength) {
-        when ((1..3).random()) {
-            1 -> password.append((0..9).random())
-            2 -> password.append(('a'..'z').random())
-            3 -> password.append(('A'..'Z').random())
-        }
+    val password = mutableListOf<Char>()
+
+    val numbers = ('0'..'9')
+    val lowerCaseLetters = ('a'..'z')
+    val upperCaseLetters = ('A'..'Z')
+
+    password.add(numbers.random())
+    password.add(lowerCaseLetters.random())
+    password.add(upperCaseLetters.random())
+
+    val allCharacters = numbers + lowerCaseLetters + upperCaseLetters
+
+    for (i in 4..passwordLength) {
+        password.add(allCharacters.random())
     }
 
-    println("Сгенерированный пароль: $password")
+    password.shuffle()
+
+    println("Сгенерированный пароль: ${password.joinToString("")}")
 }
