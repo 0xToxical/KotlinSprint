@@ -1,8 +1,8 @@
-fun main() {
-    val EGGS_INDEX = 0
-    val MILK_INDEX = 1
-    val BUTTER_INDEX = 2
+const val EGGS_INDEX = 0
+const val MILK_INDEX = 1
+const val BUTTER_INDEX = 2
 
+fun main() {
     val omletOnePortion = listOf(2, 50, 15)
 
     println("Сколько порций хотите приготовить?")
