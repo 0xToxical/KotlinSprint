@@ -12,5 +12,4 @@ fun main() {
         println("Логин или пароль недостаточно длинные")
     }
 }
-
 fun String.hasValidLength(minLength: Int) = this.length >= minLength
