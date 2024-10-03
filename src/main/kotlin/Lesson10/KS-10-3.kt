@@ -1,21 +1,19 @@
 fun main() {
-    val password = generatePassword()
+    println("Введите желаемую длину пароля")
+    var lengthOfPassword = readln().toInt()
+    val password = generatePassword(lengthOfPassword)
     println("Сгенерированный пароль: $password")
 }
 
-fun generatePassword (): String {
-    println("Введите желаемую длину пароля")
-    var password = ""
-    var lengthOfPassword = readln() .toInt()
+fun generatePassword(lengthOfPassword: Int): String = buildString {
     val numberRange = 0..9
-    val specialChars = arrayOf ('!', '@', '#','$', '%', '&','\'' , '(', ')','*', '+', ',', '-', '.', '/' ,' ')
+    val specialChars = arrayOf('!', '@', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-', '.', '/', ' ')
 
     for (i in 1..lengthOfPassword) {
         if (i % 2 == 0) {
-            password += numberRange.random()
+            append(numberRange.random())
         } else {
-            password += specialChars.random()
+            append(specialChars.random())
         }
     }
-    return password.toString()
 }
