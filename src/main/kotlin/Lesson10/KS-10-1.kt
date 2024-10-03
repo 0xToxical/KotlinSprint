@@ -1,5 +1,3 @@
-import kotlin.random.Random
-
 fun main() {
 
     val userThrow = rollDice()
@@ -10,11 +8,10 @@ fun main() {
     when {
         userThrow > compThrow -> println("Победило человечество!")
         compThrow > userThrow -> println("Победила машина!")
-        else ->println("Ничья")
+        else -> println("Ничья")
     }
 
 }
 
-fun rollDice(): Int {
-    return Random.nextInt(1,7)
-}
+fun rollDice(): Int = (1..6).random()
+
