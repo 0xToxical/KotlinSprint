@@ -3,16 +3,16 @@ class User(
     val login: String,
     val password: String,
     val mail: String,
-) {
-}
+)
+
 fun main() {
 
     val user1: User = User(
 
-    id = 1,
-    login = "Andrew",
-    password = "qwerty1",
-    mail = "Andrewtest@gmail.com",
+        id = 1,
+        login = "Andrew",
+        password = "qwerty1",
+        mail = "Andrewtest@gmail.com",
     )
 
     val user2: User = User(
