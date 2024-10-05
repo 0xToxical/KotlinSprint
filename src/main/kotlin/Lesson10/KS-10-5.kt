@@ -1,5 +1,6 @@
 const val LOGIN = "correctLogin"
 const val PASSWORD = "correctPassword"
+val basketItems = mutableListOf("item1", "item2", "item3")
 
 fun main() {
     println("Введите логин")
@@ -7,16 +8,17 @@ fun main() {
     println("Введите пароль")
     val userPassword = readln()
 
-    val token = authorization(userLogin, userPassword)
+    val token = authorize(userLogin, userPassword)
 
     if (token != null) {
         println("Авторизация успешна! Ваш токен: $token")
+        printBasketContents()
     } else {
         println("Ошибка авторизации: Логин или пароль неверные.")
     }
 }
 
-fun authorization(userLogin: String, userPassword: String): String? {
+fun authorize(userLogin: String, userPassword: String): String? {
     return if (userLogin == LOGIN && userPassword == PASSWORD) {
         generateToken()
     } else {
@@ -25,8 +27,20 @@ fun authorization(userLogin: String, userPassword: String): String? {
 }
 
 fun generateToken(): String {
-    val characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    return (1..32)
+    val tokenLength = 32
+    val characters = (('a'..'z') + ('A'..'Z') + ('0'..'9')).toList()
+    return (1..tokenLength)
         .map { characters.random() }
         .joinToString("")
+}
+
+fun printBasketContents() {
+    if (basketItems.isEmpty()) {
+        println("Корзина пуста.")
+    } else {
+        println("Содержимое корзины:")
+        basketItems.forEach { item ->
+            println("- $item")
+        }
+    }
 }
