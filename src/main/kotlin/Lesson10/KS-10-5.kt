@@ -12,7 +12,8 @@ fun main() {
 
     if (token != null) {
         println("Авторизация успешна! Ваш токен: $token")
-        printBasketContents()
+        val basket = getBasket(token)
+        printBasketContents(basket)
     } else {
         println("Ошибка авторизации: Логин или пароль неверные.")
     }
@@ -29,17 +30,23 @@ fun authorize(userLogin: String, userPassword: String): String? {
 fun generateToken(): String {
     val tokenLength = 32
     val characters = (('a'..'z') + ('A'..'Z') + ('0'..'9')).toList()
-    return (1..tokenLength)
-        .map { characters.random() }
-        .joinToString("")
+    return (1..tokenLength).map { characters.random() }.joinToString("")
 }
 
-fun printBasketContents() {
-    if (basketItems.isEmpty()) {
+fun getBasket(token: String): List<String>? {
+    return if (token.isNotEmpty()) {
+        basketItems
+    } else {
+        null
+    }
+}
+
+fun printBasketContents(basket: List<String>?) {
+    if (basket == null || basket.isEmpty()) {
         println("Корзина пуста.")
     } else {
         println("Содержимое корзины:")
-        basketItems.forEach { item ->
+        basket.forEach { item ->
             println("- $item")
         }
     }
