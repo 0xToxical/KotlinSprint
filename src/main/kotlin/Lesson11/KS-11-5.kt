@@ -3,7 +3,7 @@ class Forum {
     private val messages = mutableListOf<ForumMessage>()
     private var nextUserId = 1
 
-   fun createNewUser(userName: String): ForumMember {
+    fun createNewUser(userName: String): ForumMember {
         val newUser = ForumMember(nextUserId, userName)
         members[nextUserId] = userName
         nextUserId += 1
