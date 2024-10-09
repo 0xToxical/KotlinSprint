@@ -1,14 +1,10 @@
-class WeatherDayInKelvin(dayTemperatureKelvin: Int, nightTemperatureKelvin: Int, precipitation: Boolean) {
-
-    val dayTemperature: Int
-    val nightTemperature: Int
-    val precipitation: Boolean
-
-    init {
-        this.dayTemperature = dayTemperatureKelvin - 273
-        this.nightTemperature = nightTemperatureKelvin - 273
-        this.precipitation = precipitation
-    }
+class WeatherDayInKelvin(
+    dayTemperatureKelvin: Int,
+    nightTemperatureKelvin: Int,
+    val precipitation: Boolean,
+) {
+    val dayTemperature: Int = dayTemperatureKelvin - 273
+    val nightTemperature: Int = nightTemperatureKelvin - 273
 
     fun displayWeather() {
         println("Дневная температура: $dayTemperature°C")
@@ -18,7 +14,7 @@ class WeatherDayInKelvin(dayTemperatureKelvin: Int, nightTemperatureKelvin: Int,
 }
 
 fun main() {
-    val weatherToday = WeatherDayInKelvin(293, 283, true) // 293 K = 20°C, 283 K = 10°C
+    val weatherToday = WeatherDayInKelvin(293, 283, true)
 
     weatherToday.displayWeather()
 }
