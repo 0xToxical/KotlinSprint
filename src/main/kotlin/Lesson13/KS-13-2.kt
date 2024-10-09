@@ -4,7 +4,7 @@ class ContactOnDirectory(
     val company: String? = null
 ) {
     fun printContactInfo() {
-        println("Имя $name \nНомер: $phoneNumber \nКомпания ${company ?: "<не указано>"}")
+        println("Имя $name Номер: $phoneNumber Компания ${company ?: "<не указано>"}")
     }
 }
 
