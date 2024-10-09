@@ -16,7 +16,6 @@ fun main() {
         ContactOnDirectoryList("Петр Петров", 4567890123, "null"),
         ContactOnDirectoryList("Сергей Сергеев", 5678901234, "TechCompany")
     )
-
     val companies = contacts.mapNotNull { it.company }.filter { it != "null" }
     println("Список компаний в телефонной книге: $companies")
 }
