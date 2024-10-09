@@ -1,4 +1,9 @@
-class WeatherDay(val dayTemperature: Int, val nightTemperature: Int, val precipitation: Boolean) {
+class WeatherDay(
+    val dayTemperature: Int,
+    val nightTemperature: Int,
+    val precipitation: Boolean,
+) {
+
 
     fun printWeatherInfo() {
         println("Дневная температура: $dayTemperature°C")
