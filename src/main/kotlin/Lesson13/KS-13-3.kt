@@ -12,10 +12,11 @@ fun main() {
     val contacts = listOf(
         ContactOnDirectoryList("Андрей Андреев", 1234567890),
         ContactOnDirectoryList("Александр Александров", 2345678901, "KotlinCompany"),
-        ContactOnDirectoryList("Иван Иванов", 3456789012),
+        ContactOnDirectoryList("Иван Иванов", 3456789012, null),
         ContactOnDirectoryList("Петр Петров", 4567890123, "null"),
         ContactOnDirectoryList("Сергей Сергеев", 5678901234, "TechCompany")
     )
-    val companies = contacts.mapNotNull { it.company }.filter { it != "null" }
+
+    val companies = contacts.mapNotNull { it.company }.filter { it.isNotEmpty() }
     println("Список компаний в телефонной книге: $companies")
 }
