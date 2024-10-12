@@ -7,7 +7,6 @@ class ContactOnDirectoryV2(
         println("Имя: $name\nНомер: $phoneNumber\nКомпания: ${company ?: "<не указано>"}")
     }
 }
-
 fun main() {
     val contacts = mutableListOf<ContactOnDirectoryV2>()
 
