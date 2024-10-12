@@ -12,12 +12,12 @@ fun main() {
     val contacts = mutableListOf<ContactOnDirectoryV2>()
 
     print("Введите имя контакта: ")
-    val name = readLine() ?: return
+    val name = readln()
     print("Введите номер телефона: ")
-    val inputPhoneNumber = readLine()
+    val inputPhoneNumber = readln()
 
     try {
-        val phoneNumber = inputPhoneNumber?.toLong() ?: throw NumberFormatException("Номер телефона не может быть пустым")
+        val phoneNumber = inputPhoneNumber.toLong()
         val contact = ContactOnDirectoryV2(name, phoneNumber)
 
         contacts.add(contact)
