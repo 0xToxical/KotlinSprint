@@ -11,7 +11,6 @@ class Ship(name: String, var averageSpeed: Double, var homePort: String) {
 fun main() {
     val ship = Ship("Победоносный", 60.0, "Санкт-Петербург")
 
-    // Выводим данные о корабле
     println("Имя корабля: ${ship.name}")
     println("Средняя скорость: ${ship.averageSpeed}")
     println("Порт приписки: ${ship.homePort}")
