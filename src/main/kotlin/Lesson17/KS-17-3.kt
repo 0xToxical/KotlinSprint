@@ -1,4 +1,4 @@
-class Folder(private val folderName: String,private val numberOfFiles: Int, private val isSecret: Boolean) {
+class Folder(private val folderName: String, private val numberOfFiles: Int, private val isSecret: Boolean) {
     val name: String
         get() = if (isSecret) "Скрытая папка" else folderName
 
