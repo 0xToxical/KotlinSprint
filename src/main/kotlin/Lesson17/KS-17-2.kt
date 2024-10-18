@@ -1,10 +1,7 @@
 class Ship(name: String, var averageSpeed: Double, var homePort: String) {
     var name: String = name
-        get() = field
         set(value) {
-            if (value != field) {
-                throw IllegalArgumentException("Ошибка: Имя корабля не может быть изменено!")
-            }
+            throw IllegalArgumentException("Ошибка: Имя корабля не может быть изменено!")
         }
 }
 
