@@ -1,7 +1,5 @@
-open class Animal(val name: String) {
-    open fun eat() {
-        println("$name -> ест")
-    }
+abstract class Animal(val name: String) {
+    abstract fun eat()
 
     open fun sleep() {
         println("$name -> спит")
@@ -32,7 +30,6 @@ fun main() {
         Dog("Собака"),
         Cat("Кошка")
     )
-
 
     for (animal in animals) {
         animal.eat()
